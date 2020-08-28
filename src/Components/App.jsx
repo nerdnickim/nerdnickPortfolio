@@ -10,9 +10,7 @@ import Contact from "./Contact";
 
 const Wrapper = styled.div``;
 
-const Contain = styled.div`
-	height: 100vh;
-`;
+const Contain = styled.div``;
 
 function App() {
 	const containRef = useRef();

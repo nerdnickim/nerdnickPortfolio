@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-	height: 100%;
+	height: 100vh;
 	background: #ebd7bd;
 	color: rgb(140, 82, 41);
 	display: flex;
