@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Octagon from "./Octagon";
 import { Focus, Laptop, Energy } from "./Icons";
-import Image from "./Image";
 import { aboutMe } from "../Contains";
 
 const Wrapper = styled.div`
@@ -50,8 +49,7 @@ const Body = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+
 	height: 100%;
 	margin: 40px 0;
 	padding: 10px 0;
@@ -66,9 +64,6 @@ const PhotoContain = styled.section`
 
 const SkillsContain = styled.section`
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 `;
 
 const Ul = styled.ul`
@@ -138,6 +133,7 @@ export default ({ id }) => {
 					<Octagon width={120} title={"First"} text={"first"} Image={<Focus />} />
 					<Octagon width={120} title={"Second"} text={"second"} Image={<Laptop />} />
 					<Octagon width={120} title={"Third"} text={"third"} Image={<Energy />} />
+					<Octagon width={120} title={"Third"} text={"Third"} Image={<Energy />} />
 				</OctagonList>
 				<Body>
 					<PhotoContain>
