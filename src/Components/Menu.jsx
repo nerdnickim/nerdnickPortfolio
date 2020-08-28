@@ -48,12 +48,24 @@ export default ({ containRef }) => {
 		const mainTarget = containRef.current.childNodes;
 		const ulList = ulRef.current.childNodes;
 
+		if (0 <= window.scrollY <= mainTarget[0].offsetHeight) {
+			ulList.forEach((u) =>
+				u.innerText === "home"
+					? u.lastChild.classList.add(ACTIVE)
+					: u.lastChild.classList.remove(ACTIVE)
+			);
+		}
+
 		mainTarget.forEach((i) => {
 			let prev = i.previousSibling;
 
 			if (i.offsetTop >= window.scrollY - i.offsetHeight) {
 				if (prev?.offsetTop <= window.scrollY - i.offsetHeight) {
-					console.log(i);
+					ulList.forEach((u) =>
+						i.id === u.innerText
+							? u.lastChild.classList.add(ACTIVE)
+							: u.lastChild.classList.remove(ACTIVE)
+					);
 				}
 			}
 		});
