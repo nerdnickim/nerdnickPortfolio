@@ -5,6 +5,8 @@ const Wrapper = styled.div`
 	position: fixed;
 	top: 30px;
 	right: 30px;
+	transform: translateX(120%);
+	transition: transform 0.45s linear;
 `;
 
 const Ul = styled.ul`
@@ -54,6 +56,9 @@ export default ({ containRef }) => {
 					? u.lastChild.classList.add(ACTIVE)
 					: u.lastChild.classList.remove(ACTIVE)
 			);
+			if (ulRef.current.offsetParent) {
+				ulRef.current.offsetParent.style.transform = "translateX(120%)";
+			}
 		}
 
 		mainTarget.forEach((i) => {
@@ -66,6 +71,9 @@ export default ({ containRef }) => {
 							? u.lastChild.classList.add(ACTIVE)
 							: u.lastChild.classList.remove(ACTIVE)
 					);
+					if (ulRef.current.offsetParent) {
+						ulRef.current.offsetParent.style.transform = "translateX(0%)";
+					}
 				}
 			}
 		});

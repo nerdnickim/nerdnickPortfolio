@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { HashRouter as Router } from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyle from "../Styles/GlobalStyle";
 import Menu from "./Menu";
@@ -9,7 +10,9 @@ import Contact from "./Contact";
 
 const Wrapper = styled.div``;
 
-const Contain = styled.div``;
+const Contain = styled.div`
+	height: 100vh;
+`;
 
 function App() {
 	const containRef = useRef();
@@ -17,13 +20,15 @@ function App() {
 	return (
 		<Wrapper>
 			<GlobalStyle />
-			<Contain ref={containRef}>
-				<Home id={"home"} />
-				<About id={"about"} />
-				<Projects id={"projects"} />
-				<Contact id={"contact"} />
-			</Contain>
-			<Menu containRef={containRef} />
+			<Router>
+				<Contain ref={containRef}>
+					<Home id={"home"} />
+					<About id={"about"} />
+					<Projects id={"projects"} />
+					<Contact id={"contact"} />
+				</Contain>
+				<Menu containRef={containRef} />
+			</Router>
 		</Wrapper>
 	);
 }
