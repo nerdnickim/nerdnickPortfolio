@@ -50,9 +50,38 @@ export const aboutMe = [me, profilePhoto];
 export const mainImage = mainFace;
 
 export const names = [
-	{ id: 1, name: "newwaveboys", src: archiveList, to: "/projects/newwaveboys" },
-	{ id: 2, name: "instagram web clone", src: home, to: "/projects/webclone" },
-	{ id: 3, name: "instagram app clone", src: appHome, to: "/projects/appclone" },
+	{
+		id: 1,
+		name: "newwaveboys",
+		src: archiveList,
+		text: [
+			{ id: 0, text: "HTML" },
+			{ id: 1, text: "CSS" },
+			{ id: 2, text: "Javscript" },
+			{ id: 3, text: "Jquery" },
+		],
+		target: "newwaveboys",
+	},
+	{
+		id: 2,
+		name: "instagram web clone",
+		src: home,
+		text: [
+			{ id: 0, text: "ReactJs" },
+			{ id: 1, text: "Node" },
+		],
+		target: "instaWeb",
+	},
+	{
+		id: 3,
+		name: "instagram app clone",
+		src: appHome,
+		text: [
+			{ id: 0, text: "ReactNative" },
+			{ id: 1, text: "Node" },
+		],
+		target: "instaApp",
+	},
 ];
 
 export const photos = {

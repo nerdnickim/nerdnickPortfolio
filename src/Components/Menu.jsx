@@ -13,7 +13,7 @@ const Ul = styled.ul`
 	display: flex;
 	letter-spacing: 1px;
 	.active {
-		color: #e31b6d;
+		color: rgb(140, 82, 41);
 	}
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Octagon from "./Octagon";
-import { Focus, Laptop, Energy } from "./Icons";
+import Octagon from "../Components/Octagon";
+import { Focus, Laptop, Energy } from "../Components/Icons";
 import { aboutMe } from "../Contains";
 
 const Wrapper = styled.div`

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "../Components/Thumbnail";
 import { names } from "../Contains";
 
 const Wrapper = styled.div`
-	height: 100%;
+	height: 100vh;
 	padding-bottom: 70px;
 	background-color: #f5f5f5;
 `;
@@ -32,14 +32,16 @@ const Underline = styled.div`
 
 const Contain = styled.div`
 	position: relative;
-	width: 90%;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
 	margin-bottom: 30px;
 `;
 
 const Projects = styled.div`
-	min-height: 200px;
+	width: 90%;
+	margin: 0 auto;
+	min-height: 240px;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 `;
@@ -54,7 +56,13 @@ export default ({ id }) => {
 			<Contain>
 				<Projects>
 					{names.map((i) => (
-						<Thumbnail key={i.id} src={i.src} />
+						<Thumbnail
+							key={i.id}
+							src={i.src}
+							title={i.name}
+							text={i.text}
+							target={i.target}
+						/>
 					))}
 				</Projects>
 			</Contain>

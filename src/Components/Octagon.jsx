@@ -58,6 +58,7 @@ const TextContain = styled.div`
 const Title = styled.h1`
 	font-size: 1.5rem;
 	margin-bottom: 10px;
+	font-weight: bolder;
 `;
 
 const Span = styled.span``;

@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { css } from "styled-components";
+import First from "../Routes/Projects/First";
+import Second from "../Routes/Projects/Second";
+import Third from "../Routes/Projects/Third";
+import stateHandle from "./Hooks/stateHandle";
 
 const Wrapper = styled.div`
 	position: relative;
@@ -67,17 +71,92 @@ const Div = styled.div`
 	height: 100%;
 `;
 
-export default ({ src }) => {
+const H1 = styled.h1`
+	padding: 5px 0;
+	margin-bottom: 5px;
+	font-size: 19px;
+	font-weight: bolder;
+	letter-spacing: 1.4px;
+`;
+
+const SpanContain = styled.div`
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	margin-top: 10px;
+`;
+
+const Span = styled.span`
+	padding: 8px 5px;
+`;
+
+const Button = styled.button`
+	margin-top: 20px;
+	padding: 10px 5px;
+	background-color: rgb(213, 126, 64);
+	border-radius: 10px;
+	&:hover {
+		background-color: white;
+		span {
+			color: rgb(213, 126, 64);
+		}
+	}
+	span {
+		font-size: 16px;
+		color: white;
+	}
+
+	transition: all 0.4s linear;
+`;
+
+export default ({ src, text, title, target }) => {
+	const status = stateHandle();
+
+	const html = document.querySelector("html");
+
+	useEffect(() => {
+		if (status.status.newwaveboys) {
+			if (status.status.newwaveboys === true) {
+				html.style.overflow = "hidden";
+			}
+		}
+		if (status.status.instaWeb) {
+			if (status.status.instaWeb === true) {
+				html.style.overflow = "hidden";
+			}
+		}
+		if (status.status.instaApp) {
+			if (status.status.instaApp === true) {
+				html.style.overflow = "hidden";
+			}
+		}
+	});
+
 	return (
-		<Wrapper>
-			<ClipContain>
-				<ClipInner>
-					<ClipFront>
-						<Div src={src} />
-					</ClipFront>
-					<ClipBack>asdasdaasd</ClipBack>
-				</ClipInner>
-			</ClipContain>
-		</Wrapper>
+		<>
+			<Wrapper>
+				<ClipContain>
+					<ClipInner>
+						<ClipFront>
+							<Div src={src} />
+						</ClipFront>
+						<ClipBack>
+							<H1>{title}</H1>
+							<SpanContain>
+								{text.map((t) => (
+									<Span key={t.id}>{t.text}</Span>
+								))}
+							</SpanContain>
+							<Button onClick={() => status.changeStatus(target)}>
+								<Span>DETAIL</Span>
+							</Button>
+						</ClipBack>
+					</ClipInner>
+				</ClipContain>
+			</Wrapper>
+			{status.status.newwaveboys ? <First target={target} statusFn={status} /> : null}
+			{status.status.instaWeb ? <Second target={target} statusFn={status} /> : null}
+			{status.status.instaApp ? <Third target={target} statusFn={status} /> : null}
+		</>
 	);
 };
