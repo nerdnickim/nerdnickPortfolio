@@ -17,6 +17,9 @@ const OctagonWrap = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	svg {
+		fill: rgb(140, 82, 41);
+	}
 `;
 
 const Octagon = styled.div`
@@ -27,7 +30,7 @@ const Octagon = styled.div`
 	left: 0;
 	overflow: hidden;
 	transform: rotate(45deg);
-	background: #777;
+	background: #ebd7bd;
 
 	&:before {
 		position: absolute;
@@ -61,9 +64,21 @@ const Title = styled.h1`
 	font-weight: bolder;
 `;
 
-const Span = styled.span``;
+const Span = styled.span`
+	white-space: pre-wrap;
+	text-align: center;
+	line-height: 1.5;
+	font-size: 12px;
+`;
 
-export default ({ width, title, text, Image, src }) => {
+const SubTitle = styled.h2`
+	white-space: pre-wrap;
+	text-align: center;
+	line-height: 1.5;
+	font-size: 16px;
+`;
+
+export default ({ width, title, text, Image, src, sub }) => {
 	return (
 		<Wrapper>
 			<OctagonWrap width={width}>
@@ -72,6 +87,7 @@ export default ({ width, title, text, Image, src }) => {
 			</OctagonWrap>
 			<TextContain>
 				<Title>{title}</Title>
+				<SubTitle>{sub}</SubTitle>
 				<Span>{text}</Span>
 			</TextContain>
 		</Wrapper>

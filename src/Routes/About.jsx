@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Octagon from "../Components/Octagon";
-import { Focus, Laptop, Energy } from "../Components/Icons";
+import { Focus, Laptop, Energy, Communication } from "../Components/Icons";
 import { aboutMe } from "../Contains";
 
 const Wrapper = styled.div`
@@ -95,10 +95,10 @@ const BarContain = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	span {
 		z-index: 1;
-		color: grey;
+		color: white;
 		padding: 0 10px;
 	}
 `;
@@ -130,10 +130,30 @@ export default ({ id }) => {
 			</Header>
 			<Contain>
 				<OctagonList>
-					<Octagon width={120} title={"First"} text={"first"} Image={<Focus />} />
-					<Octagon width={120} title={"Second"} text={"second"} Image={<Laptop />} />
-					<Octagon width={120} title={"Third"} text={"third"} Image={<Energy />} />
-					<Octagon width={120} title={"Third"} text={"Third"} Image={<Energy />} />
+					<Octagon
+						width={120}
+						title={"집중력"}
+						text={"우선 순위를 설정 후 높은 집중력을 발휘"}
+						Image={<Focus />}
+					/>
+					<Octagon
+						width={120}
+						title={"끈기"}
+						text={"어려운 문제라도 포기하지 않고 끝까지 해결"}
+						Image={<Laptop />}
+					/>
+					<Octagon
+						width={120}
+						title={"향상심"}
+						text={"계속하여 새로운 기술과 나은 해결법을 모색"}
+						Image={<Energy />}
+					/>
+					<Octagon
+						width={120}
+						title={"커뮤니케이션"}
+						text={"지속적인 의사소통를 통해 더 나은 방안 모색"}
+						Image={<Communication size={48} />}
+					/>
 				</OctagonList>
 				<Body>
 					<PhotoContain>
@@ -141,7 +161,12 @@ export default ({ id }) => {
 							width={200}
 							src={aboutMe[0]}
 							title={"김 의 교"}
-							text={"나는 누구인가"}
+							sub={`Email: kcdmlry@gmail.com
+Tel: 010-8709-1352`}
+							text={`
+따분할 지언정 깊이 있게 생각하며 목표를 이루기 위한 
+확고한 자세를 가지고 있는 개발자입니다.
+								`}
 						/>
 					</PhotoContain>
 					<SkillsContain>
