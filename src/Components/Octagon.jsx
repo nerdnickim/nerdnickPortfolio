@@ -76,6 +76,7 @@ const SubTitle = styled.h2`
 	text-align: center;
 	line-height: 1.5;
 	font-size: 16px;
+	font-family: "Noto Sans KR", sans-serif;
 `;
 
 export default ({ width, title, text, Image, src, sub }) => {

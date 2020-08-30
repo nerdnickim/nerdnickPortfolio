@@ -9,6 +9,9 @@ export default createGlobalStyle`
     }
     body{
         font-size: 14px;
+        
+        font-family: 'Noto Sans KR', sans-serif;
+        
     }
     
     a{
