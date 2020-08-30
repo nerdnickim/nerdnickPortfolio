@@ -132,7 +132,7 @@ export default ({ id }) => {
 								<Button>
 									<Span>CONTACT</Span>
 								</Button>
-								<Span>send email, tel, etc</Span>
+								<Span>email, tel, etc</Span>
 							</Li>
 						</Ul>
 					</Nav>

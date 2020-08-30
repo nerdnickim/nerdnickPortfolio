@@ -33,7 +33,7 @@ const Underline = styled.div`
 const Contain = styled.div`
 	position: relative;
 	width: 100%;
-	height: 100%;
+
 	margin: 0 auto;
 	margin-bottom: 30px;
 `;
