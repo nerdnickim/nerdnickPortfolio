@@ -37,7 +37,7 @@ const Right = styled.section`
 	height: 100%;
 	padding-right: 80px;
 	@media (max-width: 613px) {
-		padding-right: 40px;
+		padding-right: 0px;
 	}
 `;
 
