@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/nerdnickPortfolio/static/js/main.c6709f71.chunk.js",
-    "main.js.map": "/nerdnickPortfolio/static/js/main.c6709f71.chunk.js.map",
+    "main.js": "/nerdnickPortfolio/static/js/main.2141689b.chunk.js",
+    "main.js.map": "/nerdnickPortfolio/static/js/main.2141689b.chunk.js.map",
     "runtime-main.js": "/nerdnickPortfolio/static/js/runtime-main.44947b15.js",
     "runtime-main.js.map": "/nerdnickPortfolio/static/js/runtime-main.44947b15.js.map",
     "static/css/2.d34346ea.chunk.css": "/nerdnickPortfolio/static/css/2.d34346ea.chunk.css",
     "static/js/2.3957f126.chunk.js": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js",
     "static/js/2.3957f126.chunk.js.map": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js.map",
     "index.html": "/nerdnickPortfolio/index.html",
-    "precache-manifest.7e39a2dcd2567cf9256648231b825ae7.js": "/nerdnickPortfolio/precache-manifest.7e39a2dcd2567cf9256648231b825ae7.js",
+    "precache-manifest.63de40ef24fd40935ebf142d07792e10.js": "/nerdnickPortfolio/precache-manifest.63de40ef24fd40935ebf142d07792e10.js",
     "service-worker.js": "/nerdnickPortfolio/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/nerdnickPortfolio/static/css/2.d34346ea.chunk.css.map",
     "static/js/2.3957f126.chunk.js.LICENSE.txt": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js.LICENSE.txt",
@@ -47,6 +47,6 @@
     "static/js/runtime-main.44947b15.js",
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.3957f126.chunk.js",
-    "static/js/main.c6709f71.chunk.js"
+    "static/js/main.2141689b.chunk.js"
   ]
 }
