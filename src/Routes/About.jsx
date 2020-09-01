@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import Octagon from "../Components/Octagon";
 import { Focus, Laptop, Energy, Communication } from "../Components/Icons";
@@ -21,6 +21,9 @@ const Header = styled.header`
 
 const Title = styled.h1`
 	font-size: 30pt;
+	@media (max-width: 613px) {
+		font-size: 25pt;
+	}
 `;
 
 const Underline = styled.div`
@@ -28,6 +31,9 @@ const Underline = styled.div`
 	width: 80px;
 	height: 5px;
 	background: black;
+	@media (max-width: 613px) {
+		width: 60px;
+	}
 `;
 
 const OctagonList = styled.div`
@@ -69,6 +75,10 @@ const SkillsContain = styled.section`
 const Ul = styled.ul`
 	position: relative;
 	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 `;
 
 const Li = styled.li`
@@ -88,6 +98,9 @@ const LiTitle = styled.span`
 	padding: 5px 0;
 	color: white;
 	z-index: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 `;
 
 const BarContain = styled.div`
@@ -104,6 +117,9 @@ const BarContain = styled.div`
 `;
 
 export default ({ id }) => {
+	const mainRef = useRef(null);
+	const [refState, setRefState] = useState();
+
 	const GuageBar = ({ width }) => {
 		return (
 			<BarContain>
@@ -122,8 +138,13 @@ export default ({ id }) => {
 		);
 	};
 
+	useEffect(() => {
+		const main = mainRef.current;
+		setRefState(main);
+	}, [refState]);
+
 	return (
-		<Wrapper id={id}>
+		<Wrapper id={id} ref={mainRef}>
 			<Header>
 				<Title>ABOUT</Title>
 				<Underline />
@@ -131,34 +152,34 @@ export default ({ id }) => {
 			<Contain>
 				<OctagonList>
 					<Octagon
-						width={120}
+						width={refState?.clientWidth <= 613 ? 80 : 120}
 						title={"집중력"}
 						text={"우선 순위를 설정 후 높은 집중력을 발휘"}
-						Image={<Focus />}
+						Image={<Focus size={refState?.clientWidth <= 613 ? 36 : 48} />}
 					/>
 					<Octagon
-						width={120}
+						width={refState?.clientWidth <= 613 ? 80 : 120}
 						title={"끈기"}
 						text={"어려운 문제라도 포기하지 않고 끝까지 해결"}
-						Image={<Laptop />}
+						Image={<Laptop size={refState?.clientWidth <= 613 ? 36 : 48} />}
 					/>
 					<Octagon
-						width={120}
+						width={refState?.clientWidth <= 613 ? 80 : 120}
 						title={"향상심"}
 						text={"계속하여 새로운 기술과 나은 해결법을 모색"}
-						Image={<Energy />}
+						Image={<Energy size={refState?.clientWidth <= 613 ? 36 : 48} />}
 					/>
 					<Octagon
-						width={120}
+						width={refState?.clientWidth <= 613 ? 80 : 120}
 						title={"커뮤니케이션"}
 						text={"지속적인 의사소통를 통해 더 나은 방안 모색"}
-						Image={<Communication size={48} />}
+						Image={<Communication size={refState?.clientWidth <= 613 ? 36 : 48} />}
 					/>
 				</OctagonList>
 				<Body>
 					<PhotoContain>
 						<Octagon
-							width={200}
+							width={refState?.clientWidth <= 613 ? 170 : 200}
 							src={aboutMe[0]}
 							title={"김 의 교"}
 							sub={`Email: kcdmlry@gmail.com
@@ -180,7 +201,7 @@ Tel: 010-8709-1352`}
 								<GuageBar width={"90%"} />
 							</Li>
 							<Li>
-								<LiTitle>Javascript</LiTitle>
+								<LiTitle>JS</LiTitle>
 								<GuageBar width={"80%"} />
 							</Li>
 							<Li>

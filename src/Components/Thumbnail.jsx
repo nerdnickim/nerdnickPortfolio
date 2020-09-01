@@ -77,13 +77,24 @@ const H1 = styled.h1`
 	font-size: 19px;
 	font-weight: bolder;
 	letter-spacing: 1.4px;
+	text-align: center;
+	line-height: 1.3;
+	@media (max-width: 613px) {
+		font-size: 16px;
+	}
 `;
 
 const SpanContain = styled.div`
 	position: absolute;
 	top: 10px;
-	left: 10px;
 	margin-top: 10px;
+	display: flex;
+
+	@media (max-width: 613px) {
+		span {
+			font-size: 10px;
+		}
+	}
 `;
 
 const Span = styled.span`
@@ -105,8 +116,13 @@ const Button = styled.button`
 		font-size: 16px;
 		color: white;
 	}
-
 	transition: all 0.4s linear;
+
+	@media (max-width: 613px) {
+		span {
+			font-size: 14px;
+		}
+	}
 `;
 
 export default ({ src, text, title, target }) => {

@@ -62,6 +62,9 @@ const Title = styled.h1`
 	font-size: 1.5rem;
 	margin-bottom: 10px;
 	font-weight: bolder;
+	@media (max-width: 613px) {
+		font-size: 1.2rem;
+	}
 `;
 
 const Span = styled.span`
@@ -69,6 +72,9 @@ const Span = styled.span`
 	text-align: center;
 	line-height: 1.5;
 	font-size: 12px;
+	@media (max-width: 613px) {
+		font-size: 11px;
+	}
 `;
 
 const SubTitle = styled.h2`

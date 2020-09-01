@@ -6,7 +6,7 @@ import FatText from "./FatText";
 import { Arrow } from "./Icons";
 
 const Wrapper = styled.div`
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -16,17 +16,25 @@ const Wrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 613px) {
+		overflow-y: scroll;
+	}
 `;
 
 const ExitContain = styled.div`
 	position: absolute;
 	top: 20px;
 	right: 40px;
+	@media (max-width: 613px) {
+		right: 20px;
+	}
 `;
 
 const Contain = styled.div`
-	width: 90%;
-	height: 80%;
+	position: absolute;
+	top: 70px;
+	left: 0;
 	display: flex;
 	flex-direction: column;
 `;
@@ -38,8 +46,9 @@ const Span = styled.span`
 //In Contain
 
 const Header = styled.header`
-	padding: 16px 0;
+	padding: 16px 10px;
 	position: relative;
+	width: 100vw;
 `;
 
 const Body = styled.div`
@@ -47,6 +56,9 @@ const Body = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 10px;
+	@media (max-width: 613px) {
+		flex-direction: column;
+	}
 `;
 
 const Bottom = styled.div`
@@ -54,10 +66,14 @@ const Bottom = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 613px) {
+		align-items: flex-start;
+		justify-content: center;
+	}
 `;
 
 const SkillInfo = styled.div`
-	width: 60%;
 	display: flex;
 	flex-direction: column;
 	font-weight: bolder;
@@ -66,13 +82,16 @@ const SkillInfo = styled.div`
 //In Body
 
 const MainView = styled.div`
-	width: 60%;
+	padding: 0 20px;
+	@media (min-width: 620px) {
+		width: 60%;
+	}
 `;
 
 const Infos = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 40%;
+	margin-top: 40px;
 	padding: 0 36px;
 	line-height: 1.3rem;
 `;
@@ -124,7 +143,6 @@ const ArrowContain = styled.div`
 	display: flex;
 	position: absolute;
 	width: 100%;
-
 	justify-content: space-between;
 `;
 
@@ -157,6 +175,9 @@ const MainImage = styled.div`
 
 const Skills = styled.div`
 	display: flex;
+	@media (max-width: 613px) {
+		flex-direction: column;
+	}
 `;
 
 const H1 = styled.h1`
@@ -173,7 +194,16 @@ const Button = styled.button`
 const Links = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-self: flex-end;
+
+	@media (min-width: 620px) {
+		align-self: flex-end;
+	}
+
+	@media (max-width: 613px) {
+		margin: 30px 0 0 20px;
+		justify-content: space-around;
+		height: 20vh;
+	}
 `;
 
 const Link = styled.a`
@@ -201,6 +231,8 @@ const Project = ({
 	statusFn,
 }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
+	const mainRef = useRef(null);
+	const [refState, setRefState] = useState();
 	const listRef = useRef();
 
 	const viewHandle = (e, { id }) => {
@@ -256,12 +288,19 @@ const Project = ({
 			uri: data[0].src,
 			id: data[0].id,
 		}));
+
+		const main = mainRef.current;
+		setRefState(main);
 	}, [data]);
 
 	return (
-		<Wrapper>
+		<Wrapper ref={mainRef}>
 			<ExitContain>
-				<ExitComponent targetS={targetS} statusFn={statusFn} />
+				<ExitComponent
+					size={refState?.clientWidth <= 613 ? 28 : 36}
+					targetS={targetS}
+					statusFn={statusFn}
+				/>
 			</ExitContain>
 			<Contain>
 				<Header>
@@ -328,6 +367,7 @@ const Project = ({
 							</Link>
 						)}
 					</Links>
+					<div />
 				</Bottom>
 			</Contain>
 		</Wrapper>

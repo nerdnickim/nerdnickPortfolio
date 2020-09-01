@@ -76,11 +76,18 @@ const Button = styled.button`
 	}
 `;
 
-const Span = styled.span``;
+const Span = styled.span`
+	@media (max-width: 613px) {
+		font-size: 1rem;
+	}
+`;
 
 const H1 = styled.h1`
 	font-size: 3.6rem;
 	white-space: nowrap;
+	@media (max-width: 613px) {
+		font-size: 1.8rem;
+	}
 `;
 
 export default ({ id }) => {

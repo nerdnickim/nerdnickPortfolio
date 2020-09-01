@@ -18,7 +18,7 @@ const ExitContain = styled.button`
 	}
 `;
 
-export default ({ targetS, statusFn }) => {
+export default ({ targetS, statusFn, size }) => {
 	const html = document.querySelector("html");
 
 	const handle = (targetS) => {
@@ -27,7 +27,7 @@ export default ({ targetS, statusFn }) => {
 	};
 	return (
 		<ExitContain onClick={() => handle(targetS)}>
-			<Exit size={38} />
+			<Exit size={size} />
 		</ExitContain>
 	);
 };
