@@ -26,13 +26,19 @@ const Left = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-left: 50px;
+
+	@media (min-width: 620px) {
+		padding-left: 50px;
+	}
 `;
 
 const Right = styled.section`
 	position: relative;
 	height: 100%;
 	padding-right: 80px;
+	@media (max-width: 613px) {
+		padding-right: 40px;
+	}
 `;
 
 const RotateContain = styled.div`
@@ -42,6 +48,10 @@ const RotateContain = styled.div`
 	transform: rotate(-90deg);
 	line-height: 1.3;
 	padding: 0 0 0 40px;
+	@media (max-width: 613px) {
+		left: -70px;
+		bottom: 90px;
+	}
 `;
 
 const Nav = styled.nav`
@@ -65,6 +75,11 @@ const Li = styled.li`
 	align-items: flex-end;
 	margin-bottom: 20px;
 	color: rgb(140, 82, 41);
+	@media (max-width: 613px) {
+		span:nth-child(2) {
+			font-size: 10px;
+		}
+	}
 `;
 
 const Button = styled.button`
@@ -78,7 +93,7 @@ const Button = styled.button`
 
 const Span = styled.span`
 	@media (max-width: 613px) {
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 `;
 
@@ -86,7 +101,7 @@ const H1 = styled.h1`
 	font-size: 3.6rem;
 	white-space: nowrap;
 	@media (max-width: 613px) {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 `;
 

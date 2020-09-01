@@ -179,7 +179,7 @@ export default ({ id }) => {
 				<Body>
 					<PhotoContain>
 						<Octagon
-							width={refState?.clientWidth <= 613 ? 170 : 200}
+							width={refState?.clientWidth <= 613 ? 140 : 200}
 							src={aboutMe[0]}
 							title={"김 의 교"}
 							sub={`Email: kcdmlry@gmail.com

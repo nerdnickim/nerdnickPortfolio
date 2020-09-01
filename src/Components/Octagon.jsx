@@ -63,7 +63,7 @@ const Title = styled.h1`
 	margin-bottom: 10px;
 	font-weight: bolder;
 	@media (max-width: 613px) {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 `;
 
@@ -73,7 +73,7 @@ const Span = styled.span`
 	line-height: 1.5;
 	font-size: 12px;
 	@media (max-width: 613px) {
-		font-size: 11px;
+		font-size: 10px;
 	}
 `;
 
@@ -83,6 +83,9 @@ const SubTitle = styled.h2`
 	line-height: 1.5;
 	font-size: 16px;
 	font-family: "Noto Sans KR", sans-serif;
+	@media (max-width: 613px) {
+		font-size: 13px;
+	}
 `;
 
 export default ({ width, title, text, Image, src, sub }) => {
