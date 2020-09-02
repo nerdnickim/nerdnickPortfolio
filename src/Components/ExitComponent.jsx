@@ -23,7 +23,7 @@ export default ({ targetS, statusFn, size }) => {
 
 	const handle = (targetS) => {
 		statusFn.changeStatus(targetS);
-		html.style.overflow = "auto";
+		html.style.overflow = "";
 	};
 	return (
 		<ExitContain onClick={() => handle(targetS)}>

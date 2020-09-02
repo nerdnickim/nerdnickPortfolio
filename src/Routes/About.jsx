@@ -118,7 +118,7 @@ const BarContain = styled.div`
 
 export default ({ id }) => {
 	const mainRef = useRef(null);
-	const [refState, setRefState] = useState();
+	const [refState, setRefState] = useState(mainRef.current);
 
 	const GuageBar = ({ width }) => {
 		return (
@@ -140,9 +140,9 @@ export default ({ id }) => {
 
 	useEffect(() => {
 		const main = mainRef.current;
+
 		setRefState(main);
 	}, [refState]);
-
 	return (
 		<Wrapper id={id} ref={mainRef}>
 			<Header>
@@ -152,34 +152,34 @@ export default ({ id }) => {
 			<Contain>
 				<OctagonList>
 					<Octagon
-						width={refState?.clientWidth <= 613 ? 80 : 120}
+						width={120}
 						title={"집중력"}
 						text={"우선 순위를 설정 후 높은 집중력을 발휘"}
-						Image={<Focus size={refState?.clientWidth <= 613 ? 36 : 48} />}
+						Image={<Focus />}
 					/>
 					<Octagon
-						width={refState?.clientWidth <= 613 ? 80 : 120}
+						width={120}
 						title={"끈기"}
 						text={"어려운 문제라도 포기하지 않고 끝까지 해결"}
-						Image={<Laptop size={refState?.clientWidth <= 613 ? 36 : 48} />}
+						Image={<Laptop />}
 					/>
 					<Octagon
-						width={refState?.clientWidth <= 613 ? 80 : 120}
+						width={120}
 						title={"향상심"}
 						text={"계속하여 새로운 기술과 나은 해결법을 모색"}
-						Image={<Energy size={refState?.clientWidth <= 613 ? 36 : 48} />}
+						Image={<Energy />}
 					/>
 					<Octagon
-						width={refState?.clientWidth <= 613 ? 80 : 120}
+						width={120}
 						title={"커뮤니케이션"}
 						text={"지속적인 의사소통를 통해 더 나은 방안 모색"}
-						Image={<Communication size={refState?.clientWidth <= 613 ? 36 : 48} />}
+						Image={<Communication />}
 					/>
 				</OctagonList>
 				<Body>
 					<PhotoContain>
 						<Octagon
-							width={refState?.clientWidth <= 613 ? 140 : 200}
+							width={210}
 							src={aboutMe[0]}
 							title={"김 의 교"}
 							sub={`Email: kcdmlry@gmail.com

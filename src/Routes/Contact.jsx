@@ -44,7 +44,6 @@ const Contain = styled.div`
 	flex-direction: column;
 	font-size: 1.4rem;
 	width: 90%;
-	height: 80%;
 	padding: 30px 10px;
 	margin: 20px 10px;
 	margin: 0 auto;

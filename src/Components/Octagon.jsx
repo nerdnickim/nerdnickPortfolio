@@ -20,6 +20,10 @@ const OctagonWrap = styled.div`
 	svg {
 		fill: rgb(140, 82, 41);
 	}
+	@media (max-width: 613px) {
+		width: ${(props) => (props.width * 2) / 3}px;
+		height: ${(props) => (props.width * 2) / 3}px;
+	}
 `;
 
 const Octagon = styled.div`
@@ -47,8 +51,16 @@ const Octagon = styled.div`
 `;
 
 const IconContain = styled.div`
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
 	position: absolute;
 	z-index: 10;
+	@media (max-width: 613px) {
+		width: 36px;
+		height: 36px;
+	}
 `;
 
 const TextContain = styled.div`
@@ -63,7 +75,7 @@ const Title = styled.h1`
 	margin-bottom: 10px;
 	font-weight: bolder;
 	@media (max-width: 613px) {
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 `;
 

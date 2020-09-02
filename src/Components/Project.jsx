@@ -56,6 +56,7 @@ const Body = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 10px;
+	overflow: hidden;
 	@media (max-width: 613px) {
 		flex-direction: column;
 	}
