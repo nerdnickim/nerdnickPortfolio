@@ -37,5 +37,8 @@ export default createGlobalStyle`
         height:100%;
     }
 
+    html{
+        overflow:scroll;
+    }
     
 `;

@@ -6,7 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 import GlobalStyle from "../Styles/GlobalStyle";
 import PageContain from "../Routes/PageContain";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+	overflow: hidden;
+`;
 
 function App() {
 	return (

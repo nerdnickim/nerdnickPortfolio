@@ -6,7 +6,9 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Menu from "../Components/Menu";
 
-const Contain = styled.div``;
+const Contain = styled.div`
+	overflow: hideen;
+`;
 
 export default () => {
 	const containRef = useRef();
