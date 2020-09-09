@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/nerdnickPortfolio/static/js/main.7c081ce1.chunk.js",
-    "main.js.map": "/nerdnickPortfolio/static/js/main.7c081ce1.chunk.js.map",
+    "main.js": "/nerdnickPortfolio/static/js/main.89c4a01c.chunk.js",
+    "main.js.map": "/nerdnickPortfolio/static/js/main.89c4a01c.chunk.js.map",
     "runtime-main.js": "/nerdnickPortfolio/static/js/runtime-main.44947b15.js",
     "runtime-main.js.map": "/nerdnickPortfolio/static/js/runtime-main.44947b15.js.map",
     "static/css/2.d34346ea.chunk.css": "/nerdnickPortfolio/static/css/2.d34346ea.chunk.css",
-    "static/js/2.3957f126.chunk.js": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js",
-    "static/js/2.3957f126.chunk.js.map": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js.map",
+    "static/js/2.8072f3c5.chunk.js": "/nerdnickPortfolio/static/js/2.8072f3c5.chunk.js",
+    "static/js/2.8072f3c5.chunk.js.map": "/nerdnickPortfolio/static/js/2.8072f3c5.chunk.js.map",
     "index.html": "/nerdnickPortfolio/index.html",
-    "precache-manifest.da6d3f078bad46d4ecc7abe58ebf6bbb.js": "/nerdnickPortfolio/precache-manifest.da6d3f078bad46d4ecc7abe58ebf6bbb.js",
+    "precache-manifest.2bd244d4412b6e5655f1b8aa87dac299.js": "/nerdnickPortfolio/precache-manifest.2bd244d4412b6e5655f1b8aa87dac299.js",
     "service-worker.js": "/nerdnickPortfolio/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/nerdnickPortfolio/static/css/2.d34346ea.chunk.css.map",
-    "static/js/2.3957f126.chunk.js.LICENSE.txt": "/nerdnickPortfolio/static/js/2.3957f126.chunk.js.LICENSE.txt",
+    "static/js/2.8072f3c5.chunk.js.LICENSE.txt": "/nerdnickPortfolio/static/js/2.8072f3c5.chunk.js.LICENSE.txt",
     "static/media/BackImage.jpeg": "/nerdnickPortfolio/static/media/BackImage.5164183c.jpeg",
     "static/media/archiveList.jpg": "/nerdnickPortfolio/static/media/archiveList.575414c5.jpg",
+    "static/media/basic1.jpg": "/nerdnickPortfolio/static/media/basic1.98932bbf.jpg",
+    "static/media/basic2.jpg": "/nerdnickPortfolio/static/media/basic2.6b1dedee.jpg",
+    "static/media/basic3.jpg": "/nerdnickPortfolio/static/media/basic3.f2cf171b.jpg",
     "static/media/comment.jpg": "/nerdnickPortfolio/static/media/comment.a08e4a73.jpg",
     "static/media/follower.jpg": "/nerdnickPortfolio/static/media/follower.5e91caa8.jpg",
     "static/media/home.jpg": "/nerdnickPortfolio/static/media/home.ed4247c8.jpg",
@@ -46,7 +49,7 @@
   "entrypoints": [
     "static/js/runtime-main.44947b15.js",
     "static/css/2.d34346ea.chunk.css",
-    "static/js/2.3957f126.chunk.js",
-    "static/js/main.7c081ce1.chunk.js"
+    "static/js/2.8072f3c5.chunk.js",
+    "static/js/main.89c4a01c.chunk.js"
   ]
 }
