@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import First from "../Routes/Projects/First";
 import Second from "../Routes/Projects/Second";
 import Third from "../Routes/Projects/Third";
+import Fourth from "../Routes/Projects/Fourth";
 import stateHandle from "./Hooks/stateHandle";
 
 const Wrapper = styled.div`
@@ -146,6 +147,11 @@ export default ({ src, text, title, target }) => {
 				html.style.overflow = "hidden";
 			}
 		}
+		if (status.status.basicJs) {
+			if (status.status.basicJs === true) {
+				html.style.overflow = "hidden";
+			}
+		}
 	});
 
 	return (
@@ -173,6 +179,7 @@ export default ({ src, text, title, target }) => {
 			{status.status.newwaveboys ? <First target={target} statusFn={status} /> : null}
 			{status.status.instaWeb ? <Second target={target} statusFn={status} /> : null}
 			{status.status.instaApp ? <Third target={target} statusFn={status} /> : null}
+			{status.status.basicJs ? <Fourth target={target} statusFn={status} /> : null}
 		</>
 	);
 };

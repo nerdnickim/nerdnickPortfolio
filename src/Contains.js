@@ -10,6 +10,12 @@ import archiveList from "./photos/newWave/archiveList.jpg";
 import productList from "./photos/newWave/productList.jpg";
 import detail from "./photos/newWave/productDetail.jpg";
 
+// basicJs
+
+import basic1 from "./photos/basicJS/basic1.jpg";
+import basic2 from "./photos/basicJS/basic2.jpg";
+import basic3 from "./photos/basicJS/basic3.jpg";
+
 // Insta Web
 import login from "./photos/cloninggram/web/login.jpg";
 import confirm from "./photos/cloninggram/web/loginConfirm.jpg";
@@ -64,6 +70,17 @@ export const names = [
 	},
 	{
 		id: 2,
+		name: "basicJs collection",
+		src: basic1,
+		text: [
+			{ id: 0, text: "HTML" },
+			{ id: 1, text: "CSS" },
+			{ id: 2, text: "Javscript" },
+		],
+		target: "basicJs",
+	},
+	{
+		id: 3,
 		name: "instagram web clone",
 		src: home,
 		text: [
@@ -73,7 +90,7 @@ export const names = [
 		target: "instaWeb",
 	},
 	{
-		id: 3,
+		id: 4,
 		name: "instagram app clone",
 		src: appHome,
 		text: [
@@ -91,6 +108,11 @@ export const photos = {
 		{ name: "archiveList", src: archiveList, id: 3 },
 		{ name: "productList", src: productList, id: 4 },
 		{ name: "detail", src: detail, id: 5 },
+	],
+	basicJs: [
+		{ name: "basic1", src: basic1, id: 1 },
+		{ name: "basic2", src: basic2, id: 2 },
+		{ name: "basic3", src: basic3, id: 3 },
 	],
 	instaWeb: [
 		{ name: "login", src: login, id: 1 },
@@ -133,6 +155,11 @@ export const textS = {
 		{ id: 2, text: "CSS" },
 		{ id: 3, text: "Javascript" },
 		{ id: 4, text: "Jquery" },
+	],
+	basicJs: [
+		{ id: 1, text: "HTML" },
+		{ id: 2, text: "CSS" },
+		{ id: 3, text: "Javascript" },
 	],
 	instaWeb: [
 		{ id: 1, text: "Javascript" },
@@ -202,6 +229,24 @@ export const explan = {
 			text: `상품 디테일 란에 있는 슬라이드는 Swiper를 통해서 구현 하였습니다`,
 		},
 	],
+	basicJs: [
+		{
+			id: 1,
+			text: `toDoList 및 그림판을 자바스크립트로만 구현`,
+		},
+		{
+			id: 2,
+			text: `이름을 입력해서 로컬 스토레이지에 저장시키면 함수가 작동하도록 설계하여 toDo 항목이 보이게 함`,
+		},
+		{
+			id: 3,
+			text: `목록을 작성하고 지울수가 있으며 로컬스토레이지에 저장 시킴으로써 데이터를 유지`,
+		},
+		{
+			id: 4,
+			text: `색깔을 클릭 함으로써 값이 달라지며 input의 타입을 range로 함으로써 굶기 조절 가능, save 클릭시 캔버스 위에 그림 저장`,
+		},
+	],
 	instaWeb: [
 		{
 			id: 1,
@@ -232,6 +277,7 @@ export const explan = {
 
 export const address = {
 	newWave: "",
+	basicJs: "https://github.com/nerdnickim/toDo.github.io",
 	instaWeb: "https://github.com/nerdnickim/prismagram-frontend",
 	instaApp: "https://github.com/nerdnickim/prismagram-app",
 	prismaServer: "https://github.com/nerdnickim/prismagram",

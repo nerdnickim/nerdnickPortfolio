@@ -5,6 +5,7 @@ export default () => {
 		newwaveboys: false,
 		instaWeb: false,
 		instaApp: false,
+		basicJs: false,
 	});
 
 	const changeStatus = (target) => {

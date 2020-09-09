@@ -48,9 +48,13 @@ const Contain = styled.div`
 const Projects = styled.div`
 	width: 90%;
 	margin: 0 auto;
-	min-height: 240px;
+	min-height: 640px;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
+	@media (max-width: 613px) {
+		min-height: 320px;
+		grid-template-columns: repeat(2, auto);
+	}
 `;
 
 export default ({ id }) => {
