@@ -5,7 +5,6 @@ import { names } from "../Contains";
 
 const Wrapper = styled.div`
 	padding-top: 30px;
-	height: 100vh;
 	padding-bottom: 70px;
 	background-color: #f5f5f5;
 `;
